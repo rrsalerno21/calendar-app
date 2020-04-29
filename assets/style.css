@@ -1,0 +1,29 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* align calendar to center and set width*/
+#total-cal-box {
+    margin: 0px auto; 
+    width: 400px;
+}
+
+/* flex each time segment */
+.time-box {
+    display: flex; 
+    flex-flow: row wrap;
+    background: #f3f3f3;
+    padding: 10px 20px;
+    border: 1px solid #888888
+}
+
+.time-display {
+    
+    margin-right:15px;
+    width: 45px;
+}
+
+.save-div {
+    margin-left: 10px;
+}
