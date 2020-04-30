@@ -27,3 +27,15 @@ header {
 .save-div {
     margin-left: 10px;
 }
+
+.past-hour {
+    background: blue;
+}
+
+.current-hour {
+    background: red;
+}
+
+.future-hour {
+    background: green;
+}

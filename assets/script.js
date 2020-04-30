@@ -48,22 +48,23 @@ $(document).ready(function() {
     // init function to call on screen load
     function init() {
         renderUI();
-
     }
 
-
-    // save button function to invoke on save button click
-    function saveBtn() {
-        // save all inputs to timeStorage
-
-        // set the localStorage item
-    }
 
     // function to call renderUI when the time changes???  How to do that
 
 
+    // event listener for save buttons
+    $('.save-btn').on('click', function(event) {
+        var selectedHour = $(this).parents()[1].getAttribute('data-hour');
+        var selectedInput = $(this).parents()[1].children[1].children[0].value;
+
+        // save that input to timeStorage
+        timeStorage[selectedHour] = selectedInput;
+
+        // set the localStorage item
+        localStorage.setItem('times', JSON.stringify(timeStorage));
+    });
     
     init();
-
-
 });
