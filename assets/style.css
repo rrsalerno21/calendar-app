@@ -79,4 +79,8 @@ i {
     cursor: pointer;
 }
 
+i:hover {
+    color: #F0FAFB;
+}
+
 /* Save button alignment*/ 
