@@ -23,6 +23,17 @@ header {
     border-radius: 5px;
 }
 
+/* Align save message and set it's margins */
+#save-message-box {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Class to hide the save message */
+.hide {
+    display: none;
+}
+
 /* Align calendar to center and set width*/
 #total-cal-box {
     margin: 0px auto; 

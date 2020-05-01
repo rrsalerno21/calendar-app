@@ -63,6 +63,30 @@ $(document).ready(function() {
 
         // set the localStorage item
         localStorage.setItem('times', JSON.stringify(timeStorage));
+
+
+        // determine what part of the day it is (AM or PM)
+        var timeOfDay, displayHour;
+        if (selectedHour < 12) {
+            timeOfDay = 'AM';
+            displayHour = selectedHour;
+        } else {
+            timeOfDay = 'PM';
+            displayHour = selectedHour - 12;
+        };
+
+        // display successful save message
+        $('#save-message').text(`Calendar Saved for ${displayHour} ${timeOfDay}`);
+        $('#save-message').fadeIn();
+        // remove saved message
+        var interval, timer = 1;
+        interval = setInterval(function(){
+            timer--;
+
+            if (timer === 0) {
+                $('#save-message').fadeOut();
+            }
+        }, 1000)
     });
     
     // call our init function to render the UI upon document load
