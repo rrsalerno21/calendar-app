@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"> <!-- My Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Open+Sans&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet"><!-- Font Awesome Link -->
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet"><!-- Font Awesome Link -->
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet"><!-- Font Awesome Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- Jquery link -->
     <title>Workday Calendar App</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Workday Calendar App</h1>
         <div id="today-time">Date</div>
         <hr class="header-line">
     </header>
 
+    <!-- Main Section for Calendar -->
     <main class="wrapper">
+        <!-- Div to wrap the calendar section -->
         <div id="total-cal-box">
 
+            <!-- Time box to contain the time display, textarea input, and save button -->
             <div class="time-box" id="7AM">
+                <!-- Div to contain the time display label -->
                 <div class="time-display">
                     <label for="7AM-message">7 AM</label><br>
                 </div>
 
+                <!-- Div to contain the time input textarea -->
                 <div class="time-input-div">
                     <textarea class="time-input" name="7AM-message" placeholder="Insert your calendar events here" data-hour="7"></textarea>
                 </div>
 
+                <!-- Div to contain the save button icon -->
                 <div class="save-div">
                     <div class="save-btn"><i class="far fa-save"></i></div>
                 </div>
             </div>
+            <!-- End of time box.  Same structure follows for all time boxes below -->    
+
 
             <div class="time-box" id="8AM">
                 <div class="time-display">
@@ -192,8 +201,9 @@
             
         </div>
     </main>
-
+    <!-- Script for moments JS to grab current time and display it -->
     <script src="assets/moment.js"></script>
+    <!-- Script for app's logic -->
     <script src="assets/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// Ready document before executing script
 $(document).ready(function() {
     // object to store all of our times in
     var timeStorage;
@@ -12,7 +13,7 @@ $(document).ready(function() {
             7: '', 8: '', 9: '', 10: '', 11: '',
             12: '', 13: '', 14: '', 15: '', 16: '', 17: '', 18: ''
         };
-    // or else...
+    // else...
     } else {
         // use what's in localStorage as our object for reference
         timeStorage = JSONgrab;
@@ -24,13 +25,14 @@ $(document).ready(function() {
         // update the #today-time tag
         $('#today-time').text(moment().format('dddd, MMMM Do, YYYY'));
 
-        // go through each time input and change the background based on the time and the text area value
+        // set a variable to reference the current hour
         var currentHour = moment().hour();
 
+        // go through each time input and change the background based on the time and the text area value
         $('.time-input').each(function() { 
             var timeInputHour = parseInt($(this)[0].getAttribute('data-hour'));
             
-            // background colors
+            // set the background colors
             if (timeInputHour < currentHour) {
                 $(this).addClass('past-hour');
             } else if (timeInputHour === currentHour) {
@@ -39,7 +41,7 @@ $(document).ready(function() {
                 $(this).addClass('future-hour');
             };
 
-             // text area       
+             // set the text area value from what's in timeStorage       
             $(this)[0].value = timeStorage[timeInputHour];
         })
     };
@@ -50,22 +52,19 @@ $(document).ready(function() {
         renderUI();
     }
 
-
-    // function to call renderUI when the time changes???  How to do that
-
-
     // event listener for save buttons
     $('.save-btn').on('click', function(event) {
+        // set variables for which hour and input value is associated with the save button that was clicked
         var selectedHour = $(this).parents()[1].children[1].children[0].getAttribute('data-hour');
         var selectedInput = $(this).parents()[1].children[1].children[0].value;
 
-        // save that input to timeStorage
+        // save that input to timeStorage based on the corresponding hour
         timeStorage[selectedHour] = selectedInput;
 
-        console.log(timeStorage);
         // set the localStorage item
         localStorage.setItem('times', JSON.stringify(timeStorage));
     });
     
+    // call our init function to render the UI upon document load
     init();
 });
