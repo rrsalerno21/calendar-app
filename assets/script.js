@@ -67,7 +67,7 @@ $(document).ready(function() {
 
         // determine what part of the day it is (AM or PM)
         var timeOfDay, displayHour;
-        if (selectedHour < 12) {
+        if (selectedHour <= 12) {
             timeOfDay = 'AM';
             displayHour = selectedHour;
         } else {
