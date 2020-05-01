@@ -78,7 +78,8 @@ $(document).ready(function() {
         // display successful save message
         $('#save-message').text(`Calendar Saved for ${displayHour} ${timeOfDay}`);
         $('#save-message').fadeIn();
-        // remove saved message
+
+        // remove saved message after a 1 second timer
         var interval, timer = 1;
         interval = setInterval(function(){
             timer--;
