@@ -6,7 +6,7 @@ header {
 /* align calendar to center and set width*/
 #total-cal-box {
     margin: 0px auto; 
-    width: 400px;
+    max-width: 400px;
 }
 
 /* flex each time segment */
@@ -14,12 +14,11 @@ header {
     display: flex; 
     flex-flow: row wrap;
     background: #f3f3f3;
-    padding: 10px 20px;
-    border: 1px solid #888888
+    padding: 5px 20px 0px;
+    border: 1px solid #444444
 }
 
 .time-display {
-    
     margin-right:15px;
     width: 45px;
 }
@@ -29,13 +28,13 @@ header {
 }
 
 .past-hour {
-    background: blue;
+    background: rgb(189, 189, 189)
 }
 
 .current-hour {
-    background: red;
+    background: rgb(192, 28, 28);
 }
 
 .future-hour {
-    background: green;
+    background: rgb(16, 133, 16);
 }
