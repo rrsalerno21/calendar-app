@@ -64,11 +64,13 @@ $(document).ready(function() {
         // set the localStorage item
         localStorage.setItem('times', JSON.stringify(timeStorage));
 
-
         // determine what part of the day it is (AM or PM)
         var timeOfDay, displayHour;
-        if (selectedHour <= 12) {
+        if (parseInt(selectedHour) < 12) {
             timeOfDay = 'AM';
+            displayHour = selectedHour;
+        } else if (parseInt(selectedHour) === 12) {
+            timeOfDay = 'PM';
             displayHour = selectedHour;
         } else {
             timeOfDay = 'PM';
