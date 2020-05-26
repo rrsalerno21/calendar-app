@@ -1,5 +1,6 @@
 # Calendar App
-A calendar app built with Javascript/jQuery, Moment.js, HTML, CSS.  Allows the user to save calendar events as text inputs for workday hours, and saves all inputs to local storage.
+A calendar app built with Javascript/jQuery, Moment.js, HTML, CSS.  Allows the user to save calendar events as text inputs for workday hours, and saves all inputs to local storage.  Deployed at [https://rrsalerno21.github.io/calendar-app/](https://rrsalerno21.github.io/calendar-app/)
+
 
 ## Technology Used
 HTML5, CSS3, Javascript/jQuery, [Moment.js API](https://momentjs.com/)
